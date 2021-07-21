@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type='text/css' href='style.css'/>
+	<link rel="stylesheet" href='bootstrap.min.css'>
+    <title>Suicide Analysis</title>
+</head>
+<body style='background-color: #F5EEF8;'>
+<div class='container'><!--bootstrap-->
+	<div class='row'>
+		<div class='col-md-12'>
+
+	<div id='header'>
+		<div id='logo'>
+			<div id='logo_text'>
+			<h1>Crash Reporting - Incidents Data in Montgomery County, MD</h1>
+			<br>
+			<h2>Trinh Vu</h2>	
+			</div><!--logo_text-->
+		</div><!--logo-->
+					
+	</div> <!--header-->
+	
+	<div id='content'>
+		<h2>Introduction</h2>
+			<p>Data File: The Crash Reporting - Incidents Data from Montgomery County, MD.<br>
+			Data source: <a href='https://catalog.data.gov/dataset/crash-reporting-incidents-data'>The Crash Reporting - Incidents Data from Montgomery County, MD</a><br>
+			Data description: “This dataset provides general information about each collision and details
+			of all traffic collisions occurring on county and local roadways within Montgomery County, as
+			collected via the Automated Crash Reporting System (ACRS) of the Maryland State Police,
+			and reported by the Montgomery County Police, Gaithersburg Police, Rockville Police, or the
+			Maryland-National Capital Park Police.<br>
+			Please note that these collision reports are based on preliminary information supplied to the
+			Police Department by the reporting parties. Therefore, the collision data available on this web
+			page may reflect:<br>
+			-Information not yet verified by further investigation <br>
+			-Information that may include verified
+			and unverified collision data -Preliminary collision classifications may be changed at a later
+			date based upon further investigation <br>
+			-Information may include mechanical or human error <br>
+			This dataset can be joined with the other 2 Crash Reporting datasets (see URLs below) by the
+			State Report Number. <br>
+			
+			<a href='https://data.montgomerycountymd.gov/Public-Safety/Crash-Reporting-Drivers-Data/mmzvx632'>Crash Reporting - Drivers Data</a><br>
+			 
+			<a href='https://data.montgomerycountymd.gov/PublicSafety/Crash-Reporting-Non-Motorists-Data/n7fk-dce5'>Crash Reporting - Non-Motorists Data</a></p>
+			<br> 
+					
+			<p>This project aims to analyze crash incidents data using exploratory analysis, provide visualizations, conduct causal research question and predictive question,
+			and build statistical models to answer the quetions.</p>
+			<p>The causal research question is: Is the variable 'Hit/Run' dependent on the variable 'Weather'?<br>
+			The predictive research question is: Will a person more likely to hit and run in clear weather?</p>
+
+		
+        <h2>Exploratory Data Analysis</h2>   
+		<h3>Hit and Run Cases</h3>      
+            <div class='tableauPlaceholder' id='viz1626760460434' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;HitRunPieChart&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+			<param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+			<param name='name' value='CrashIncidentsReportinMontgomeryMD&#47;HitRunPieChart' /><param name='tabs' value='no' />
+			<param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;HitRunPieChart&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+			<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+			<param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	    </div>                
+	    <script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626760460434');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='600px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	    </script>    
+            <br>
+
+            <p>There are 16.46% of Hit and Run cases. The majority of the cases (83.54%) is not Hit and Run.</p>
+        
+        <h3>Number of incidents in different weather conditions</h3>
+            <div class='tableauPlaceholder' id='viz1626800127910' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;Weather&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
+			<param name='site_root' value='' /><param name='name' value='CrashIncidentsReportinMontgomeryMD&#47;Weather' />
+			<param name='tabs' value='no' /><param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;Weather&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+			<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+			<param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	    </div>   
+       
+		<script type='text/javascript'>                    
+			var divElement = document.getElementById('viz1626800127910');                    
+			var vizElement = divElement.getElementsByTagName('object')[0];                    
+			vizElement.style.width='700px';vizElement.style.height='500px';                    
+			var scriptElement = document.createElement('script');                    
+			scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+			vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+		</script>
+        <br>
+        <p>Most incidents happen in clear weather.</p>
+
+        <h3>ACRS Type</h3>
+        <div class='tableauPlaceholder' id='viz1626800870497' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;ACRSType&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+			<param name='name' value='CrashIncidentsReportinMontgomeryMD&#47;ACRSType' /><param name='tabs' value='no' /><param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;ACRSType&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+			<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626800870497');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='550px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+        <br>
+        <p>Property damage is the most common crash reporting type, followed by Injury crash.</p>
+
+        <h3>Light</h3>
+        <div class='tableauPlaceholder' id='viz1626801349524' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;Light&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+			<param name='name' value='CrashIncidentsReportinMontgomeryMD&#47;Light' /><param name='tabs' value='no' /><param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;Light&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+			<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626801349524');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='550px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+
+        <br>
+        <p>43,237 incidents happened during daylight. 15,193 incidents happened at dark with lights. 2,348 incidents happened at dark but no lights.
+	There are small number of incidents happened at other times such as dusk and dawn.</p>
+
+        <h3>Road Condition</h3>
+        <div class='tableauPlaceholder' id='viz1626801800207' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;RoadCondition&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+			<param name='name' value='CrashIncidentsReportinMontgomeryMD&#47;RoadCondition' /><param name='tabs' value='no' /><param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cr&#47;CrashIncidentsReportinMontgomeryMD&#47;RoadCondition&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+			<param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626801800207');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='550px';vizElement.style.height='400px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+
+        <br>
+        <p>Most road condition has no defects when incidents happen.
+        </p>
+
+        <h3>Collision Type</h3>
+        <div class='tableauPlaceholder' id='viz1626802135085' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DJ&#47;DJJQNRYZ8&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;DJJQNRYZ8' /> <param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DJ&#47;DJJQNRYZ8&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+			<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+			<param name='tabs' value='no' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626802135085');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='600px';vizElement.style.height='500px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+
+        <br>
+        <p>The most common collision type is Same Dir Rear End, followed by Single Vehicle and Straight Movement Angle collision types. In the hit and run incidents, 
+	most of hit and run incidents are classified as Others, but regardless of this type, the most common collision types are Same Dir Rear End and Same Direction 
+	Sideswipe. 
+        </p>
+
+        <h3> At Fault</h3>
+        <div class='tableauPlaceholder' id='viz1626803429938' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PT&#47;PTBBX98CT&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;PTBBX98CT' /> <param name='toolbar' value='yes' />
+			<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PT&#47;PTBBX98CT&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+			<param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626803429938');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='500px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+        <br>
+        <p>In most cases, drivers are the ones at fault.</p>
+
+	<h3>Traffic Control</h3>
+	<div class='tableauPlaceholder' id='viz1626803768465' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;D3&#47;D3FCYCZSJ&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;D3FCYCZSJ' /> 
+			<param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;D3&#47;D3FCYCZSJ&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+			<param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626803768465');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='800px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+	<br>
+        <p>Most incidents happen when there is no traffic controls. There are still a large number of incidents happen
+        when there is traffic signal and stop signs.
+        </p>
+
+	<h3>Surface Condition</h3>
+	<div class='tableauPlaceholder' id='viz1626804227857' style='position: relative'>
+		<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GW&#47;GWTD2XN26&#47;1_rss.png' style='border: none' /></a></noscript>
+		<object class='tableauViz'  style='display:none;'>
+			<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;GWTD2XN26' /> 
+			<param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GW&#47;GWTD2XN26&#47;1.png' /> 
+			<param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+			<param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' />
+		</object>
+	</div>                
+	<script type='text/javascript'>                    
+		var divElement = document.getElementById('viz1626804227857');                    
+		var vizElement = divElement.getElementsByTagName('object')[0];                    
+		vizElement.style.width='800px';vizElement.style.height='450px';                    
+		var scriptElement = document.createElement('script');                    
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
+	<br>
+        <p>Most incidents happen on dry surface. Wet, Ice, and Snow surfaces are also common in crash incidents.    
+        </p>
+
+	<h2>Causal Research Question</h2>
+	<p>The question is "Is Hit/Run dependent on the Weather?"<br>
+	The null hypothesis: Hit/Run and Weather are independent.<br>
+	The alternative hypothesis: Hit/Run and Weather are dependent on each other.
+	</p>
+	
+	<p>To answer this question, Chi-square independence test is used.<br>
+	The columns ‘Hit/Run’ and ‘Weather’ are both categorical, so the contingency table is created.
+	</p>
+
+		<div class="text-center">
+                <img src="images/Contingency_table.png" height="400px" width="300px" align='center'>
+            	</div>
+	<br>
+	<p>Chi-square of independence test is performed and here is the result<br>
+		<div class="text-center">
+                <img src="images/Chisquare.png" height="150px" width="450px" align='center'>
+            	</div>
+	</p>
+
+	<br>
+	<p>The p-values are much less than 0.05, so we reject the null hypothesis. That means the variables ‘Hit/Run’ and ‘Weather’ are dependent of each other.
+	</p>
+
+	<h2>Predictive Research Question</h2>
+	<p>The question is "Will a person more likely to hit and run when the weather is clear?"<br>
+	Null hypothesis: The chance that a person will hit and run is the same for different weather conditions.<br>
+	Alternative hypothesis: The chance that a person will hit and run is not the same for different weather conditions.</p>
+	<br>
+
+	<p>To answer the question, Logistic Regression is used, and the p-values and odd-ratios will be used.<br>
+	The target for the model is ‘Hit/Run’. The dataset is split into 80% training set and 20% testing set. The evaluation 
+	metrics are F1 score and ROC curve.<br>
+	Confusion matrix<br>
+		<div class="text-center">
+                <img src="images/cm.png" height="400px" width="400px" align='center'>
+            	</div>
+		<br>
+		<div class="text-center">
+                <img src="images/roc.png" height="300px" width="400px" align='center'>
+            	</div>
+	</p>
+	<p>F1 score of the model is 70.4% and ROC curve metric is 91.5%. This is a good model.<br>
+	Because the Weather and Hit/Run variables are the two main variables in the question, I will obtain the p-values and odd-ratios 
+	from the model for only weather conditions. That is what I will focus on to answer the question.<br>
+		<div class="text-center">
+                <img src="images/weather.png" height="450px" width="350px" align='center'>
+            	</div>
+	</p>
+	<br>
+	<p>The p-value greater than 0.05 means that the feature is not significant, so the significant weather conditions are 
+	Blowing Snow, Clear, Cloudy, Raining, and Wintry Mix. The odd ratios can tell the percent chance an event is more (or less) likely to happen. 
+	Looking at the odd ratios, we can interpret the result as follow:<br>
+
+	In clear weather, hit and run is 1.1 times more likely to happen. 
+	There are 6% less likely to hit and run in Blowing Snow, 2% less likely to hit and run in cloudy weather, 4% less likely to hit and run in the rain, 
+	and there's no difference in wintry mix (because odd ratio for wintry mix is 1.0).</p>
+	<br>
+	<p>To answer the hypothesis:<br>
+	Based on the results, we reject the null hypothesis and can make conclusion that the chance a person will hit and run is not the same for different weather conditions.<br>
+	A person is 1.1 times more likely to hit and run in clear weather.
+	</p>
+	
+	<h2>Conclusion</h2>
+	<p>1. For causal question, Hit/Run and Weather variables are dependent of each other.</p>
+	<p>2. For predictive quesiton, a person is 1.1 times more likely to hit and run in clear weather. The chance for hit and run is different in different weather conditions.
+
+	</div><!--content-->
+	<br><br>
+    <div id='footer'>
+        Copyright &copy; 
+            <script>
+                var d = new Date();
+                document.write(d.getFullYear());
+            </script>
+        <br>
+        Trinh Vu
+    </div><!--footer-->
+		<div>
+	</div>
+</div><!--bootstrap-->	
+
+</body>
+</html>
